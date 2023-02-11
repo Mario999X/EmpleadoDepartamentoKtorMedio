@@ -10,11 +10,12 @@ val koin_version: String by project
 
 // Bases de datos
 val h2_r2dbc_version: String by project
+val kotysa_version: String by project
 
 plugins {
     kotlin("jvm") version "1.8.0"
     id("io.ktor.plugin") version "2.2.3"
-    id("org.jetbrains.kotlin.plugin.serialization") version "1.8.10"
+    id("org.jetbrains.kotlin.plugin.serialization") version "1.8.0"
     id("com.google.devtools.ksp") version "1.8.0-1.0.8"
 }
 
@@ -59,6 +60,9 @@ dependencies {
     implementation("io.insert-koin:koin-annotations:$koin_ksp_version") // Si usamos Koin con KSP Anotaciones
     ksp("io.insert-koin:koin-ksp-compiler:$koin_ksp_version") // Si usamos Koin con KSP Anotaciones
 
+    // H2 R2DBC para usar H2 como base de datos
+    // Reactividad con Kotysa
+    implementation("org.ufoss.kotysa:kotysa-r2dbc-coroutines:$kotysa_version")
     // H2 R2DBC para usar H2 como base de datos
     runtimeOnly("io.r2dbc:r2dbc-h2:$h2_r2dbc_version")
 }
