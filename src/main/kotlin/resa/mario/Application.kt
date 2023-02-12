@@ -41,4 +41,10 @@ fun Application.module() {
  * 9. Generacion de repositorios
  * 10. Generacion de servicios
  * 11. Generacion de rutas
+ *
+ * -- EXTRA -- Cache para departamentos // Comparar con empleados, no estan cacheados.
+ * 12. Generar cache/s [en este caso, cache 4k] en servicios
+ * 13. Generar repositorios cacheados
+ * 14. Realizar cambios en el servicio
+ *
  */

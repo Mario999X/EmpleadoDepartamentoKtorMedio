@@ -10,9 +10,12 @@ val ksp_version: String by project
 val koin_ksp_version: String by project
 val koin_version: String by project
 
-// Bases de datos
+// Base de dato
 val h2_r2dbc_version: String by project
 val kotysa_version: String by project
+
+// Cache
+val cache_version: String by project
 
 plugins {
     kotlin("jvm") version "1.8.0"
@@ -69,6 +72,9 @@ dependencies {
     implementation("org.ufoss.kotysa:kotysa-r2dbc-coroutines:$kotysa_version")
     // H2 R2DBC para usar H2 como base de datos
     runtimeOnly("io.r2dbc:r2dbc-h2:$h2_r2dbc_version")
+
+    // Cache
+    implementation("io.github.reactivecircus.cache4k:cache4k:$cache_version")
 }
 
 // Para Koin Annotations, directorio donde se encuentran las clases compiladas

@@ -5,13 +5,13 @@ import kotlinx.coroutines.flow.toList
 import org.koin.core.annotation.Named
 import org.koin.core.annotation.Single
 import resa.mario.models.Departamento
-import resa.mario.repositories.departamento.DepartamentoRepository
+import resa.mario.repositories.departamento.DepartamentoCachedRepository
 import resa.mario.repositories.empleado.EmpleadoRepository
 
 @Single
 class DepartamentoServiceImpl(
-    @Named("DepartamentoRepository")
-    private val repository: DepartamentoRepository,
+    @Named("DepartamentoCachedRepository")
+    private val repository: DepartamentoCachedRepository,
     @Named("EmpleadoRepository")
     private val empleadoRepository: EmpleadoRepository
 ) : DepartamentoService {
