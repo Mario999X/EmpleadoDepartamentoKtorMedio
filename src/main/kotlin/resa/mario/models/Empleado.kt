@@ -7,10 +7,9 @@ data class Empleado(
     val id: Long,
     val name: String,
     val email: String,
-    val avatar: String,
-    val departamento: Departamento? = null
+    var departamentoId: Long? = null
 ) {
     override fun toString(): String {
-        return "Empleado(id=$id, name='$name', departamento=$departamento)"
+        return "Empleado(id=$id, name='$name', email='$email', departamentoId=$departamentoId)"
     }
 }

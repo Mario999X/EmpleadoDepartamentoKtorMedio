@@ -1,6 +1,8 @@
 val ktor_version: String by project
 val kotlin_version: String by project
-val logback_version: String by project
+//val logback_version: String by project
+val logbackclassic_version: String by project
+val micrologging_version: String by project
 
 // Koin
 val koin_ktor_version: String by project
@@ -48,7 +50,9 @@ dependencies {
     implementation("io.ktor:ktor-server-auth-jwt-jvm:$ktor_version")
 
     // Logging
-    implementation("ch.qos.logback:logback-classic:$logback_version")
+    //implementation("ch.qos.logback:logback-classic:$logback_version")
+    implementation("ch.qos.logback:logback-classic:$logbackclassic_version")
+    implementation("io.github.microutils:kotlin-logging-jvm:$micrologging_version")
 
     // Test
     testImplementation("io.ktor:ktor-server-tests-jvm:$ktor_version")
